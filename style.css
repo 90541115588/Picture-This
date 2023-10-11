@@ -31,8 +31,9 @@ h4 {
 
 img {
   display: block;
+  width: 100%;
 }
-/* Responsive Styles for Large Viewports (960px or larger) */
+
 @media (min-width: 960px) {
   .header {
     grid-template-columns: repeat(2, 1fr);
