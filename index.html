@@ -15,76 +15,27 @@
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-   <!-- Default Image -->
-    <img src="images/museum.jpg" alt="placeholder">
+
+    <picture>
+      <source
+        media="(max-width: 960px)"
+        srcset="
+          images/landscape-320x180.jpg,
+          images/landscape-480x270.jpg,
+          images/landscape-720x405.jpg,
+          images/landscape-960x540.jpg"
+      />
+
+      <source
+        media="(min-width: 960px)"
+        srcset="
+          images/square-480_x_480.jpg,
+          images/square-640_x_640.jpg,
+          images/square-800_x_800.jpg"
+      />
+
+      <img src="images/museum.jpg" alt="placeholder">
+    </picture>
   </header>
-
-        <picture>
-          
-            <!-- LANDSCAPE -->
-            <source
-                srcset="
-                    images/landscape-320x180.jpg,
-                    images/landscape-640x360.jpg,
-                    images/landscape-960x540.jpg
-                "
-                media="(max-width: 320px)"
-            />
-
-            <source
-                srcset="
-                    images/landscape-480x270.jpg,
-                    images/landscape-960x540.jpg,
-                    images/landscape-1440x810.jpg
-                "
-                media="(max-width: 480px)"
-            />
-
-            <source
-                srcset="
-                    images/landscape-720x405.jpg,
-                    images/landscape-1440x810.jpg,
-                    images/landscape-2160x1215.jpg
-                "
-                media="(max-width: 720px)"
-            />
-
-            <source
-                srcset="
-                    images/landscape-960x540.jpg,
-                    images/landscape-1920x1080.jpg,
-                    images/landscape-2880x1621.jpg
-                "
-                media="(max-width: 960px)"
-            />
-            <!-- SQUARE -->
-            <source
-                srcset="
-                    imagessquare-800_x_800.jpg,
-                    images/square-1600_x_1600.jpg,
-                    images/square-2400_x_2400.jpg
-                "
-                media="(min-width: 1600px)"
-            />
-
-            <source
-                srcset="
-                    images/square-640_x_640.jpg,
-                    images/square-1280_x_1280.jpg,
-                    images/lsquare-1920_x_1920.jpg
-                "
-                media="(min-width: 1280px)"
-            />
-
-            <source
-                srcset="
-                    images/square-480_x_480.jpg,
-                    images/square-960_x_960.jpg,
-                    images/square-1440_x_1440.jpg
-                "
-                media="(min-width: 960px)"
-            />
-
-        </picture>
 </body>
 </html>
