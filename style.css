@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,700&display=swap');
 
-
 html, body {
   margin: 0;
-  padding: 0; 
+  padding: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #f0f0f0; 
+  background-color: #f0f0f0;
 }
 
 /* Header Styles */
@@ -34,15 +33,27 @@ h4 {
 }
 
 /* Image Styles */
-img {
+.image {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-/* Responsive Styles for Large Viewports (960px or larger) */
 @media (min-width: 960px) {
   .header {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .image {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 959px) {
+  .image {
+    width: 100%;
+    height: auto;
   }
 }
