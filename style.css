@@ -1,11 +1,10 @@
-   @import url('https://fonts.googleapis.com/css?family=Roboto:300,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,700&display=swap');
 
 html, body {
   margin: 0;
-  padding: 0; 
+  padding: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #f0f0f0; 
+  background-color: #f0f0f0;
 }
 
 /* Header Styles */
@@ -40,9 +39,38 @@ img {
   height: auto;
 }
 
-/* Responsive Styles for Large Viewports (960px or larger) */
+.landscape-image {
+  display: none; 
+}
+
+
+.square-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 @media (min-width: 960px) {
   .header {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .square-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .landscape-image {
+    display: none;
+  }
+}
+
+@media (max-width: 959px) {
+  .square-image {
+    display: none;
+  }
+  .landscape-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
   }
 }
